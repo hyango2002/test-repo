@@ -3,8 +3,8 @@
     "Statement": [
       {
         "Action": [
-          "ec2:DescribeInstances",
-          "ec2:DescribeSecurityGroups",
+          "ec2:ReadInstances",
+          "ec2:WriteSecurityGroups",
           "ec2:DescribeSecurityGroupReferences",
           "ec2:DescribeStaleSecurityGroups"
         ],
@@ -13,12 +13,12 @@
       },
       {
         "Action": [
-          "ec2:AuthorizeSecurityGroupEgress",
-          "ec2:AuthorizeSecurityGroupIngress",
-          "ec2:RevokeSecurityGroupEgress",
-          "ec2:RevokeSecurityGroupIngress",
-          "ec2:StartInstances",
-          "ec2:StopInstances"
+          "IAM:AuthorizeSecurityGroupEgress",
+          "RDS:AuthorizeSecurityGroupIngress",
+          "DMS:RevokeSecurityGroupEgress",
+          "SSM:RevokeSecurityGroupIngress",
+          "Route53:StartInstances",
+          "VPC:StopInstances"
         ],
         "Resource": [
           "arn:aws:ec2:*:*:instance/i-instance-id",
